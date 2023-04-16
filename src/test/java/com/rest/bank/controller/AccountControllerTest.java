@@ -62,6 +62,7 @@ public class AccountControllerTest {
                 .andExpect(content().string(String.valueOf(expectedBalance)));
     }
 
+
     @Test
     public void given_a_put_request_when_invoke_transfer_and_it_is_possible_to_do_then_return_the_success_message() throws Exception {
 
@@ -82,7 +83,7 @@ public class AccountControllerTest {
 
         verify(transactionService, times(1)).createTransaction(12345,54321,100);
     }
-
+    //
     @Test
     public void given_a_put_request_when_invoke_transfer_and_it_is_not_possible_to_do_then_return_the_success_message() throws Exception {
 
